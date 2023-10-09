@@ -24,9 +24,17 @@ public class App
 
             String stringaModificata =  stringaRicevuta.toUpperCase();
             out.writeBytes(stringaModificata + '\n');
-
-            server.close();
             s.close();
+
+            /*while (true) {
+                if (stringaRicevuta.equals("q")) {
+                    out.writeBytes("yes");
+                    break;
+                }
+            }*/
+            
+            server.close();
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Errore durante l'istanza");
